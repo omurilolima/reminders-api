@@ -1,8 +1,9 @@
-// 1. Run "npm init -y" to generate a basic package.json file
-// 2. Install ts-node running "npm i -D ts-node typescript"
-// 3. Go to package.json and add a new script: "start" : "node --loader ts-node/esm index.ts"
-// 4. Create a tsconfig.json file running: "npx tsc --init"
-// Run "npm start" to see the output of your program
+// 1. Install express: "npm i express"
+// 2. Add Typescript and the declararion files: "npm i -D typescript @types/node @types/express"
+// 3. Create a Typescript compiler configuration file: "tsc --inittsc"
+// 4. Install node Mon for restart the server everytime you change a file: "npm i -D nodemon"
+// 5. Update the start Script in package.json to "start": "nodemon --exec \"node --loader ts-node/esm\" index.ts"
 
-let x: number = 1;
-console.log(x);
+import express from "express";
+const app = express();
+app.listen(8000, () => console.log("Server started+++"));
