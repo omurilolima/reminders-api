@@ -5,7 +5,10 @@
 // 5. Update the start Script in package.json to "start": "nodemon --exec \"node --loader ts-node/esm\" index.ts"
 
 import express from "express";
+import remindersRouter from "./routers/reminders.ts";
 const app = express();
+
+app.use("/reminders", remindersRouter);
 
 app.get("/", (req, res) => {
 	res.send("Hello World!");
